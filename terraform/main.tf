@@ -112,7 +112,7 @@ resource "aws_security_group" "demo_sg" {
 # EC2 Instance
 # -------------------------
 resource "aws_instance" "demo1" {
-  ami                    = var.ami_id
+  ami                    = "ami-051a31ab2f4d498f5"
   instance_type          = var.instance_type
   subnet_id              = aws_subnet.public.id
   vpc_security_group_ids = [aws_security_group.demo_sg.id]
